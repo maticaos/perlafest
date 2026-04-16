@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cumpleaños — 02.05.26</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amarillo:      '#FFD600',
+            rojo:          '#D91E18',
+            'rojo-oscuro': '#7A0000',
+            noche:         '#0D0D0D',
+            'gris-noche':  '#1C1C1C',
+          },
+          fontFamily: {
+            anton:    ['Anton', 'sans-serif'],
+            dm:       ['DM Sans', 'sans-serif'],
+            playfair: ['Playfair Display', 'serif'],
+            dancing:  ['Dancing Script', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+    .input-field {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(255,214,0,0.3);
+      color: #FFD600;
+      padding: 12px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .input-field::placeholder { color: rgba(255,214,0,0.35); }
+    .input-field:focus { border-color: #FFD600; }
+    select.input-field option { background: #1C1C1C; color: #FFD600; }
+
+    .btn-rsvp {
+      background: #FFD600;
+      color: #0D0D0D;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      padding: 14px 40px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .btn-rsvp:hover { background: #fff; }
+    .btn-rsvp:disabled { opacity: 0.5; cursor: not-allowed; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── AMARILLO ── -->
+  <section class="min-h-screen bg-amarillo flex flex-col items-center justify-center px-6 py-20">
+    <div class="max-w-xl w-full text-center">
+
+      <p class="font-dancing text-rojo text-xl mb-4">una invitación personal</p>
+
+      <h1 class="font-anton text-rojo uppercase leading-[0.92] mb-6"
+          style="font-size: clamp(3rem, 12vw, 7.5rem);">
+        QUERIDOS<br/>Y GENTILES<br/>LECTORES.
+      </h1>
+
+      <p class="font-dm text-rojo text-lg mb-10">
+        Es de mi agrado invitarlos a mi fiestita de cumpleaños
+      </p>
+
+      <div class="mx-auto mb-10 border-4 border-rojo overflow-hidden"
+           style="max-width:360px; aspect-ratio:4/3;">
+        <img src="./image/meme.jpg" alt="NO FALTES" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="inline-block bg-rojo text-amarillo font-anton px-7 py-3 text-xl uppercase tracking-widest mb-3">
+        02 · 05 · 26 &nbsp;—&nbsp; 21:00 HS
+      </div>
+
+      <p class="font-dm text-rojo font-bold text-base mt-2">
+        Palermo Wine Club · Buenos Aires
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ── ROJO OSCURO · El lugar ── -->
+  <section class="px-6 py-20" style="background: linear-gradient(to bottom, #CC1800, #3D0000);">
+    <div class="max-w-2xl mx-auto">
+
+      <div class="mb-10 text-center">
+        <p class="font-dm text-amarillo/50 text-xs uppercase tracking-[0.35em] mb-2">el lugar</p>
+        <h2 class="font-anton text-amarillo uppercase leading-none"
+            style="font-size: clamp(2.2rem, 8vw, 5rem);">
+          PALERMO<br/>WINE CLUB
+        </h2>
+      </div>
+
+      <!-- Dirección -->
+      <p class="font-dm text-amarillo/70 text-sm text-center mb-4">Gorriti 5646, C1414 Cdad. Autónoma de Buenos Aires</p>
+
+      <!-- Mapa -->
+      <div class="w-full overflow-hidden mb-4 border border-amarillo/30" style="aspect-ratio:16/9;">
+        <iframe
+          src="https://www.google.com/maps?q=Gorriti+5646+Buenos+Aires&output=embed"
+          width="100%" height="100%"
+          style="border:0;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Palermo Wine Club"></iframe>
+      </div>
+
+      <!-- Link al mapa -->
+      <a href="https://maps.app.goo.gl/7z6njW7njt4K8Tgm9"
+         target="_blank" rel="noopener noreferrer"
+         class="block text-center font-dm text-amarillo text-sm underline underline-offset-4 mb-8">
+        Ver en Google Maps
+      </a>
+
+      <div class="grid grid-cols-3 gap-3">
+        <div class="border border-amarillo/25 p-4 text-center">
+          <p class="font-dm text-amarillo/45 text-[10px] uppercase tracking-widest mb-1">fecha</p>
+          <p class="font-anton text-amarillo text-2xl leading-none">02.05</p>
+          <p class="font-dm text-amarillo/70 text-xs mt-1">sábado</p>
+        </div>
+        <div class="border border-amarillo/25 p-4 text-center">
+          <p class="font-dm text-amarillo/45 text-[10px] uppercase tracking-widest mb-1">hora</p>
+          <p class="font-anton text-amarillo text-2xl leading-none">21:00</p>
+        </div>
+        <div class="border border-amarillo/25 p-4 text-center">
+          <p class="font-dm text-amarillo/45 text-[10px] uppercase tracking-widest mb-1">happy hour</p>
+          <p class="font-anton text-amarillo text-2xl leading-none">—22:00</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── NEGRO ROJIZO · La vibe ── -->
+  <section class="px-6 py-20" style="background: linear-gradient(to bottom, #3D0000, #1A0000);">
+    <div class="max-w-2xl mx-auto">
+
+      <div class="mb-10 text-center">
+        <p class="font-dm text-white/30 text-xs uppercase tracking-[0.35em] mb-2">vibra del lugar</p>
+        <div class="w-12 h-[1px] bg-white/20 mx-auto mt-3"></div>
+      </div>
+
+      <div class="space-y-6 font-dm text-white/80 text-base leading-relaxed mb-14">
+        <p>Es un club de vinos muy chill</p>
+        <p>Hay cuentas separadas, cada quien es libre de pedir lo que guste</p>
+        <p>Hasta las 22:00 hs hay Happy Hour. Hagamos lo posible por llegar en horario (me super mega incluyo acá) para aprovecharlo.</p>
+        <p>Vayan comidos, la verdad es que el día es más para disfrutar el vinito y picar algo, si quieren comer igual son unas mariposas libres, yo solo tiro facto.</p>
+      </div>
+
+      <!-- Menú -->
+      <a href="https://menu.fu.do/palermowineclub/qr-menu"
+         target="_blank" rel="noopener noreferrer"
+         class="block text-center font-dm text-white text-sm underline underline-offset-4">
+        Ver menú del lugar
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── NEGRO · Lo importante ── -->
+  <section class="px-6 py-20 bg-noche">
+    <div class="max-w-2xl mx-auto">
+
+      <div class="mb-10 text-center">
+        <p class="font-dm text-white/25 text-xs uppercase tracking-[0.35em]">importante</p>
+        <div class="w-12 h-[1px] bg-white/10 mx-auto mt-3"></div>
+      </div>
+
+      <div class="space-y-6 font-dm text-white/70 text-base leading-relaxed">
+        <p>
+          Si aceptas ir, que sea un día para relajarte, hablar, disfrutar un vinito o lo que sea que quieras tomar y celebrarme jajajaja…. así que la energía que sea de disfrute, de apertura, de soltar
+        </p>
+        <p>
+          Si estás recibiendo esta invitación, por favor, sentite libre de rechazarla en caso de que no puedas o no quieras ir… yo igual tkm y lo entiendo, <span class="font-dancing text-white/90 text-lg">promiseeeee</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── NEGRO · RSVP ── -->
+  <section class="px-6 py-20 bg-gris-noche">
+    <div class="max-w-lg mx-auto">
+
+      <div class="mb-10 text-center">
+        <p class="font-dm text-amarillo/40 text-xs uppercase tracking-[0.35em] mb-2">confirmación de asistencia</p>
+        <h2 class="font-anton text-amarillo uppercase leading-none"
+            style="font-size: clamp(2.5rem, 9vw, 5rem);">
+          ¿VAS?
+        </h2>
+      </div>
+
+      <form id="rsvp-form" class="space-y-4">
+
+        <div>
+          <label class="font-dm text-amarillo/50 text-xs uppercase tracking-widest block mb-2">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required class="input-field" />
+        </div>
+
+        <div>
+          <label class="font-dm text-amarillo/50 text-xs uppercase tracking-widest block mb-2">¿Confirmás asistencia?</label>
+          <select id="asistencia" name="asistencia" required class="input-field">
+            <option value="" disabled selected>elegí una opción</option>
+            <option value="Si, ahí estoy">Sí, ahí estoy</option>
+            <option value="No puedo ir">No puedo ir, igual tkm</option>
+          </select>
+        </div>
+
+        <!-- Invitados (visible solo si confirma asistencia) -->
+        <div id="invitados-section" style="display:none;">
+          <label class="font-dm text-amarillo/50 text-xs uppercase tracking-widest block mb-2">¿Cuántos acompañantes traés?</label>
+          <div class="flex gap-2">
+            <button type="button" data-val="0" class="guest-btn font-anton text-base w-10 h-10 border border-amarillo/30 text-amarillo/50 hover:border-amarillo hover:text-amarillo transition-colors">0</button>
+            <button type="button" data-val="1" class="guest-btn font-anton text-base w-10 h-10 border border-amarillo/30 text-amarillo/50 hover:border-amarillo hover:text-amarillo transition-colors">1</button>
+            <button type="button" data-val="2" class="guest-btn font-anton text-base w-10 h-10 border border-amarillo/30 text-amarillo/50 hover:border-amarillo hover:text-amarillo transition-colors">2</button>
+            <button type="button" data-val="3" class="guest-btn font-anton text-base w-10 h-10 border border-amarillo/30 text-amarillo/50 hover:border-amarillo hover:text-amarillo transition-colors">3</button>
+            <button type="button" data-val="4" class="guest-btn font-anton text-base w-10 h-10 border border-amarillo/30 text-amarillo/50 hover:border-amarillo hover:text-amarillo transition-colors">4</button>
+            <button type="button" data-val="5" class="guest-btn font-anton text-base w-10 h-10 border border-amarillo/30 text-amarillo/50 hover:border-amarillo hover:text-amarillo transition-colors">5</button>
+          </div>
+          <input type="hidden" id="invitados-count" name="invitados_count" value="0" />
+        </div>
+
+        <div class="pt-2 text-center">
+          <button type="submit" id="btn-submit" class="btn-rsvp">Confirmar</button>
+        </div>
+
+        <div id="form-status" class="text-center text-sm font-dm hidden"></div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-noche border-t border-white/5 px-6 py-8 text-center">
+    <p class="font-dancing text-white/25 text-base">con amor y mucho vino</p>
+  </footer>
+
+  <!-- ── RSVP SCRIPT ──
+    Para conectar con Google Sheets:
+    1. Abrí script.google.com → Nuevo proyecto
+    2. Pegá el código de Apps Script (te lo doy abajo)
+    3. Implementar → Nueva implementación → Aplicación web
+       - Ejecutar como: Yo
+       - Quién tiene acceso: Cualquier usuario
+    4. Copiá la URL que te da y pegala en SHEET_URL abajo
+  -->
+  <script>
+    const SHEET_URL = 'TU_URL_DE_APPS_SCRIPT';
+
+    const form         = document.getElementById('rsvp-form');
+    const statusEl     = document.getElementById('form-status');
+    const submitBtn    = document.getElementById('btn-submit');
+    const asistenciaEl = document.getElementById('asistencia');
+    const invitadosSec = document.getElementById('invitados-section');
+    const guestCount   = document.getElementById('invitados-count');
+
+    // Mostrar/ocultar sección de acompañantes
+    asistenciaEl.addEventListener('change', () => {
+      invitadosSec.style.display = asistenciaEl.value === 'Si, ahí estoy' ? 'block' : 'none';
+      guestCount.value = '0';
+      document.querySelectorAll('.guest-btn').forEach(b => b.classList.remove('bg-amarillo', 'text-noche', 'border-amarillo'));
+    });
+
+    // Selección de número de acompañantes
+    document.querySelectorAll('.guest-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.guest-btn').forEach(b => {
+          b.classList.remove('bg-amarillo', 'text-noche', 'border-amarillo');
+        });
+        btn.classList.add('bg-amarillo', 'text-noche', 'border-amarillo');
+        guestCount.value = btn.dataset.val;
+      });
+    });
+
+    // Envío
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nombre     = document.getElementById('nombre').value.trim();
+      const asistencia = asistenciaEl.value;
+      const invitados  = guestCount.value;
+
+      submitBtn.disabled    = true;
+      submitBtn.textContent = 'Enviando...';
+      statusEl.className    = 'text-center text-sm font-dm';
+      statusEl.textContent  = '';
+
+      if (SHEET_URL === 'TU_URL_DE_APPS_SCRIPT') {
+        showStatus(`✓ Recibido, ${nombre}! (modo demo — conectá Google Sheets para guardar)`, 'ok');
+        resetForm();
+        submitBtn.disabled    = false;
+        submitBtn.textContent = 'Confirmar';
+        return;
+      }
+
+      try {
+        await fetch(SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nombre, asistencia, acompanantes: invitados }),
+        });
+        showStatus(`✓ Gracias, ${nombre}! Quedó anotado.`, 'ok');
+        resetForm();
+      } catch (err) {
+        showStatus('Algo salió mal. Intentá de nuevo.', 'error');
+      } finally {
+        submitBtn.disabled    = false;
+        submitBtn.textContent = 'Confirmar';
+      }
+    });
+
+    function resetForm() {
+      form.reset();
+      invitadosSec.style.display = 'none';
+      guestCount.value = '0';
+      document.querySelectorAll('.guest-btn').forEach(b => b.classList.remove('bg-amarillo', 'text-noche', 'border-amarillo'));
+    }
+
+    function showStatus(msg, type) {
+      statusEl.textContent = msg;
+      statusEl.className = `text-center text-sm font-dm mt-2 ${type === 'ok' ? 'text-amarillo' : 'text-red-400'}`;
+    }
+  </script>
+
+</body>
+</html>
