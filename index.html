@@ -265,7 +265,7 @@
     4. Copiá la URL que te da y pegala en SHEET_URL abajo
   -->
   <script>
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx36_HGmPTlT_L_8AfPV5-qf3hQNaR6ffkjZLarfzWUzgCdem4-sQPECnWcQ8A8s74ycw/exec';
+    const SHEET_URL = 'https://formspree.io/f/xaqaeake';
 
     const form         = document.getElementById('rsvp-form');
     const statusEl     = document.getElementById('form-status');
@@ -313,8 +313,12 @@
       }
 
       try {
-        const params = new URLSearchParams({ nombre, asistencia, acompanantes: invitados });
-        await fetch(`${SHEET_URL}?${params}`, { method: 'GET', mode: 'no-cors' });
+        const res = await fetch(SHEET_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ nombre, asistencia, acompanantes: invitados }),
+        });
+        if (!res.ok) throw new Error();
         showStatus(`✓ Gracias, ${nombre}! Quedó anotado.`, 'ok');
         resetForm();
       } catch (err) {
