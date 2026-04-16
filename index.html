@@ -265,7 +265,7 @@
     4. Copiá la URL que te da y pegala en SHEET_URL abajo
   -->
   <script>
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycby9ygFIk6lb_odrqnmKG9IhoZAYfjBQUcvED8B7R88gCdY7HfRj4ndKzP0gmOY1fvtXPg/exec';
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx36_HGmPTlT_L_8AfPV5-qf3hQNaR6ffkjZLarfzWUzgCdem4-sQPECnWcQ8A8s74ycw/exec';
 
     const form         = document.getElementById('rsvp-form');
     const statusEl     = document.getElementById('form-status');
@@ -313,12 +313,8 @@
       }
 
       try {
-        await fetch(SHEET_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre, asistencia, acompanantes: invitados }),
-        });
+        const params = new URLSearchParams({ nombre, asistencia, acompanantes: invitados });
+        await fetch(`${SHEET_URL}?${params}`, { method: 'GET', mode: 'no-cors' });
         showStatus(`✓ Gracias, ${nombre}! Quedó anotado.`, 'ok');
         resetForm();
       } catch (err) {
